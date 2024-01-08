@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.OptionalDouble;
 import java.util.stream.Collectors;
 
+// 2. *Дополнительная задча: Переработать метод балансировки корзины товаров cardBalancing() с использованием Stream API
+
 public class CardBalancing {
     public static void main(String[] args) {
         List<Double> prices = Arrays.asList(10.0, 20.0, 30.0, 40.0, 50.0);
