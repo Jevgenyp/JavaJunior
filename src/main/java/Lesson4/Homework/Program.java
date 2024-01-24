@@ -11,19 +11,19 @@ public class Program {
                 .addAnnotatedClass(Course.class)
                 .buildSessionFactory();
 
-        // Create a course
+
         createCourse(sessionFactory, "Mathematics", 100);
 
-        // Read all courses
+
         List<Course> courses = readAllCourses(sessionFactory);
         for (Course course : courses) {
             System.out.println(course);
         }
 
-        // Update a course
+
         updateCourse(sessionFactory, 1, "Advanced Mathematics", 120);
 
-        // Delete a course
+
         deleteCourse(sessionFactory, 2);
 
         sessionFactory.close();

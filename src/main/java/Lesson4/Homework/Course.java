@@ -16,17 +16,17 @@ public class Course {
     @Column(name = "duration", nullable = false)
     private int duration;
 
-    // Default constructor is required by Hibernate
+
     public Course() {
     }
 
-    // Parameterized constructor
+
     public Course(String title, int duration) {
         this.title = title;
         this.duration = duration;
     }
 
-    // Getters and Setters
+
     public int getId() {
         return id;
     }
@@ -51,7 +51,7 @@ public class Course {
         this.duration = duration;
     }
 
-    // toString method
+
     @Override
     public String toString() {
         return "Course{" +

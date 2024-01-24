@@ -11,24 +11,24 @@ public class Program2 {
         String password = "password"; // Replace with your actual password
 
         try (Connection connection = DriverManager.getConnection(url, user, password)) {
-            // Creating the SchoolDB database
+
             createDatabase(connection, "SchoolDB");
             System.out.println("Database created successfully");
 
-            // Using the SchoolDB database
+
             useDatabase(connection, "SchoolDB");
             System.out.println("Using database successfully");
 
-            // Creating the Courses table
+
             createCoursesTable(connection);
             System.out.println("Table created successfully");
 
-            // Inserting data into Courses table
+
             insertCourse(connection, "Mathematics", 100);
             insertCourse(connection, "Physics", 80);
             System.out.println("Data inserted successfully");
 
-            // Reading data from Courses table
+
             List<Course> courses = readCourses(connection);
             for (Course course : courses) {
                 System.out.println(course);
@@ -39,7 +39,7 @@ public class Program2 {
             updateCourse(connection, 1, "Advanced Mathematics", 120);
             System.out.println("Data updated successfully");
 
-            // Deleting data from Courses table
+
             deleteCourse(connection, 2);
             System.out.println("Data deleted successfully");
 
